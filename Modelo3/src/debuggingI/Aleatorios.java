@@ -15,7 +15,7 @@ public class Aleatorios {
         
         int numAleatorio[] = new int[elementos];
         
-        for(int i = 0; i < numAleatorio.length; i++) {
+        for(var i = 0; i < numAleatorio.length; i++) {
             numAleatorio[i] = (int)(Math.random()*100);
         }
         

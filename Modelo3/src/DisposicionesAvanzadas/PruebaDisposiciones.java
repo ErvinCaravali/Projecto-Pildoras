@@ -18,7 +18,7 @@ class FrameCaja extends JFrame {
     
     public FrameCaja() {
         
-        setTitle("Marco en la caja");   
+        setTitle("Ventana en la caja");   
         setVisible(true);
         setSize(200, 200);
         setLocationRelativeTo(null);
@@ -46,7 +46,7 @@ class FrameCaja extends JFrame {
         
         cajaH2.add(texto2);
         
-        JButton boton1 = new JButton("Ok");
+        JButton boton1 = new JButton("Oks");
         JButton boton2 = new JButton("Cancelar");
         
         Box cajaH3 = Box.createHorizontalBox();

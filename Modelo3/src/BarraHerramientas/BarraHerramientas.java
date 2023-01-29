@@ -47,23 +47,16 @@ class MarcoBarra extends JFrame {
         menu.add(accionAzul);
         menu.add(accionAmarillo);
         menu.add(accionRojo);
-        
         JMenuBar barraMenu = new JMenuBar();
         barraMenu.add(menu);
-        
         setJMenuBar(barraMenu);
         add(panel);
-        
-      
         JToolBar barra = new JToolBar();
         barra.add(accionAzul);
         barra.add(accionAmarillo);
         barra.add(accionRojo);
-        
         barra.addSeparator();
-        
         barra.add(accionSalir);
-        
         add(barra, BorderLayout.NORTH);
         
     }
@@ -74,7 +67,7 @@ class MarcoBarra extends JFrame {
         
             putValue(Action.NAME, nombre);
             putValue(Action.SMALL_ICON, icono);
-            putValue(Action.SHORT_DESCRIPTION, " Se pone el panel de color " + nombre);
+            putValue(Action.SHORT_DESCRIPTION, " Se puso el panel de color " + nombre);
             putValue("color de fondo", colorBoton);
                 
         }

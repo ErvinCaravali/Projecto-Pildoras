@@ -1,0 +1,3 @@
+excepciones.LeerImagen
+excepciones.LaminaConImagen
+excepciones.MarcoImagen

@@ -8,7 +8,7 @@ import javax.swing.*;
  * @author Ervin Caravali Ibarra
  */
 public class PanelDeBotones extends JPanel {
-    
+      private ButtonGroup grupo;
     public PanelDeBotones(String titulo, String [] opciones) {
         
         setBorder(BorderFactory.createTitledBorder(BorderFactory.createEtchedBorder(), titulo));
@@ -29,15 +29,9 @@ public class PanelDeBotones extends JPanel {
     }
     
     public String dameSeleccion() {
-        /*
-        ButtonModel boton = grupo.getSelection();
-        String s = boton.getActionCommand();
-        
-        return s;
-        */
-        
+    
         return grupo.getSelection().getActionCommand();
     }
     
-    private ButtonGroup grupo;
+  
 }

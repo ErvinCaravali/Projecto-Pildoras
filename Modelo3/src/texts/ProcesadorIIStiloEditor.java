@@ -14,14 +14,14 @@ import javax.swing.text.*;
  */
 public class ProcesadorIIStiloEditor {
     public static void main(String[] args) {
-        MenuProcesador_II menu = new MenuProcesador_II();
+        MenuProcesador2 menu = new MenuProcesador2();
     }
 }
 
-class MenuProcesador_II extends JFrame{
+class MenuProcesador2 extends JFrame{
     
-    public MenuProcesador_II(){
-        PanelProcesador_II mipanel = new PanelProcesador_II();
+    public MenuProcesador2(){
+        PanelProcesador2 mipanel = new PanelProcesador2();
         add(mipanel);
         setVisible(true);
         setBounds(500, 300, 550, 400);
@@ -30,8 +30,8 @@ class MenuProcesador_II extends JFrame{
     }
 }
 
-class PanelProcesador_II extends JPanel{
-    public PanelProcesador_II(){
+class PanelProcesador2 extends JPanel{
+    public PanelProcesador2(){
         
         setLayout(new BorderLayout());
         JPanel panelmenu = new JPanel();

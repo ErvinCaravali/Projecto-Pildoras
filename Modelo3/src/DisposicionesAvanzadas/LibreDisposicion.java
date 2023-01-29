@@ -34,37 +34,29 @@ class PanelLibre extends JPanel {
         JLabel edad = new JLabel("Edad: ");
         JLabel telefono = new JLabel("Telefono: ");
         
-        JTextField c_nombre = new JTextField(10);
-        JTextField c_apellido = new JTextField(10);
-        JTextField c_edad = new JTextField(10);
-        JTextField c_telefono = new JTextField();
+        JTextField cnombre = new JTextField(10);
+        JTextField capellido = new JTextField(10);
+        JTextField cedad = new JTextField(10);
+        JTextField ctelefono = new JTextField();
         
-        /*
-        nombre.setBounds(20, 20, 80, 10);
-        
-        c_nombre.setBounds(100, 17, 100, 20);
-        
-        apellido.setBounds(20, 60, 80, 15);
-        
-        c_apellido.setBounds(100, 55, 100, 20);   
-        */
         
         add(nombre);
-        add(c_nombre);
+        add(cnombre);
         
         add(apellido);
-        add(c_apellido);
+        add(capellido);
         
         add(edad);
-        add(c_edad);
+        add(cedad);
         
         add(telefono);
-        add(c_telefono);
+        add(ctelefono);
     }
 }
 
 class EnColumnas implements LayoutManager {
-
+   private int b;
+    private int o = 20;
     @Override
     public void addLayoutComponent(String name, Component comp) {
     }
@@ -75,6 +67,8 @@ class EnColumnas implements LayoutManager {
 
     @Override
     public Dimension preferredLayoutSize(Container contenedor) {
+        
+        return null;
         
     }
 
@@ -88,7 +82,7 @@ class EnColumnas implements LayoutManager {
         
         int d = contenedor.getWidth();
         
-        x = d/2;
+        b = d/2;
         
         int contador = 0;
         
@@ -98,22 +92,21 @@ class EnColumnas implements LayoutManager {
             
             contador++;
             Component c = contenedor.getComponent(i);
-            c.setBounds(x-100, y, 100, 20);
+            c.setBounds(b-100, o, 100, 20);
             
-            x+=100;
+            b+=100;
             
             if(contador%2 == 0) {
                 
-                x = d/2;
-                y += 40;
+                b = d/2;
+                o += 40;
                  
             }
         }
         
     }
     
-    private int x;
-    private int y = 20;
+   
     
 }
 
