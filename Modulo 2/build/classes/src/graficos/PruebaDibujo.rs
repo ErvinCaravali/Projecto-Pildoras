@@ -1,0 +1,3 @@
+graficos.PanelFiguras
+graficos.PruebaDibujo
+graficos.MarcoConDibujos

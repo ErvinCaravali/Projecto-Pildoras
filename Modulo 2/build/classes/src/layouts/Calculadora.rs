@@ -1,0 +1,5 @@
+layouts.PanelSuperior$InsertaNumero
+layouts.Calculadora
+layouts.PanelSuperior
+layouts.PanelSuperior$AccionOperador
+layouts.CalculadoraVentana

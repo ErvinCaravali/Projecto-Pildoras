@@ -1,0 +1,3 @@
+graficos.FrameImagen
+graficos.PruebaImagenes
+graficos.PanelImagen
