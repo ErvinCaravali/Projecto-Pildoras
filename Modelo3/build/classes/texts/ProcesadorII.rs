@@ -1,4 +1,0 @@
-null
-texts.ProcesadorII
-texts.PanelProcesador_II
-texts.MenuProcesador_II

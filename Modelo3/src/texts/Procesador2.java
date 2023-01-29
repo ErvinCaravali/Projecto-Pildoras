@@ -10,16 +10,16 @@ import java.awt.event.ActionListener;
  *
  * @author Ervin Caravali Ibarra
  */
-public class ProcesadorII {
+public class Procesador2 {
     public static void main(String[] args) {
-        MenuProcesador_II menu = new MenuProcesador_II();
+        MenuProcesador2 menu = new MenuProcesador2();
     }
 }
 
-class MenuProcesador_II extends JFrame{
+class MenuProcesador2 extends JFrame{
     
-    public MenuProcesador_II(){
-        PanelProcesador_II mipanel = new PanelProcesador_II();
+    public MenuProcesador2(){
+        PanelProcesador2 mipanel = new PanelProcesador2();
         add(mipanel);
         setVisible(true);
         setBounds(500, 300, 550, 400);
@@ -71,12 +71,12 @@ class PanelProcesador_II extends JPanel{
     
     public void configura_menu(String rotulo, String menu, String tipo_letra, int estilos, int tam) {
         JMenuItem elem_menu = new JMenuItem(rotulo);
-        if (menu == "fuente") {
-            fuente.add(elem_menu);
-        } else if (menu == "estilo") {
-            estilo.add(elem_menu);
-        } else if (menu == "tamanio") {
-            tamanio.add(elem_menu);
+        if (null != menu) switch (menu) {
+            case "fuente" -> fuente.add(elem_menu);
+            case "estilo" -> estilo.add(elem_menu);
+            case "tamanio" -> tamanio.add(elem_menu);
+            default -> {
+            }
         }
         elem_menu.addActionListener(new Gestiona_Eventos(rotulo, tipo_letra, estilos, tam));
     }
@@ -97,20 +97,23 @@ class PanelProcesador_II extends JPanel{
         public void actionPerformed(ActionEvent e) {
             
             letras = miarea.getFont();
-            if(menu == "Arial" || menu == "Courier" || menu == "Verdana") {
-                estilo_letra = letras.getStyle();
-                tamanio_letra = letras.getSize();
-            } else if (menu == "Cursiva" || menu == "Negrita") {
-                
-                if(letras.getStyle() == 1 || letras.getStyle() == 2) {
-                    estilo_letra = 3;
+            if(null != menu) switch (menu) {
+                case "Arial", "Courier", "Verdana" -> {
+                    estilo_letra = letras.getStyle();
+                    tamanio_letra = letras.getSize();
                 }
-                
-                tipo_texto = letras.getFontName();
-                tamanio_letra = letras.getSize();
-            } else if (menu == "12" || menu == "16" || menu == "20" || menu == "24") {
-                estilo_letra = letras.getStyle();
-                tipo_texto = letras.getFontName();
+                case "Cursiva", "Negrita" -> {
+                    if(letras.getStyle() == 1 || letras.getStyle() == 2) {
+                        estilo_letra = 3;
+                    }   tipo_texto = letras.getFontName();
+                    tamanio_letra = letras.getSize();
+                }
+                case "12", "16", "20", "24" -> {
+                    estilo_letra = letras.getStyle();
+                    tipo_texto = letras.getFontName();
+                }
+                default -> {
+                }
             }
             
             miarea.setFont(new Font(tipo_texto, estilo_letra, tamanio_letra));
